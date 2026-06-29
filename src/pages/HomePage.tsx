@@ -6,7 +6,6 @@ import "../scss/Pagination.scss";
 import "../scss/HomePage.scss";
 import SortSelect from "../components/SortSelect";
 
-
 import * as ReactPaginateModule from "react-paginate";
 function unwrapDefault(mod: any) {
   while (mod && typeof mod === "object" && "default" in mod) {
@@ -44,7 +43,10 @@ function HomePage() {
 
       <ReactPaginate
         pageCount={Math.ceil(total / 12)}
-        onPageChange={(event) => setPage(event.selected + 1)}
+        // onPageChange={(event) => setPage(event.selected + 1)}
+        onPageChange={(event: { selected: number }) =>
+          setPage(event.selected + 1)
+        }
         forcePage={page - 1}
         containerClassName="pagination"
         activeClassName="pagination__active"
