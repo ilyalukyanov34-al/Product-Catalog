@@ -1,0 +1,27 @@
+@use "./variables" as *;
+
+.sort-select {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 34px 0;
+  flex-wrap: wrap;
+
+  &__label {
+    font-size: 14px;
+    font-weight: 500;
+    color: $color-text-main;
+  }
+  @media screen and (max-width: 955px) {
+    &__label {
+      font-size: 13px;
+      font-weight: 500;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    &__label {
+      font-size: 12px;
+      font-weight: 500;
+    }
+  }
+}

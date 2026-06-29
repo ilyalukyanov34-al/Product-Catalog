@@ -1,0 +1,19 @@
+@use "./scss/variables" as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-main;
+  background: $color-bg;
+  color: $color-text-main; // Заменили $color-text на $color-text-main
+}
+.container {
+  max-width: 1440px; // Максимальная ширина контента (можешь поставить 1280px или 1400px, если хочешь пошире)
+  margin: 0 auto; // Центрируем контейнер по центру экрана
+  padding: 0 20px; // Боковые отступы-безопасности для мобилок и планшетов
+  width: 100%; // Чтобы на маленьких экранах он занимал всю доступную ширину
+}

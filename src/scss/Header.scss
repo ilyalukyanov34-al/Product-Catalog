@@ -1,0 +1,61 @@
+@use "./variables" as *;
+@use "./mixin" as *;
+
+.header {
+  width: calc(
+    100% - 40px
+  ); // ширина = "вся доступная ширина минус 40px" — даёт ровно 20px с каждой стороны
+  max-width: 1980px; // на 40px шире, чем .container (1440px) — по 20px "запаса" с каждой стороны
+  margin: 20px auto 30px; // auto по бокам — центрирует так же, как у .container
+  background-color: $color-surface;
+  border-radius: 16px;
+  border-bottom: 1px solid $color-border;
+  box-sizing: border-box;
+  position: relative;
+  padding: 20px;
+  // background: gray;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between; // логотип влево, сортировка вправо
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    // боковые отступы (padding: 0 20px) и max-width уже задаёт .container,
+    // здесь их повторно не пишем, чтобы не было двух разных источников правды
+  }
+
+  &__logo {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: $color-primary;
+  }
+
+  // они автоматически применятся к самому .header, раз мы уже внутри его блока
+  @media screen and (max-width: $breakpoint-mobile) {
+    margin: 8px auto 0;
+    border-radius: 12px;
+
+    &__logo {
+      font-size: 20px;
+      font-weight: 650;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-small) {
+    margin: 8px auto 0;
+
+    &__logo {
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (max-width: 325px) {
+    &__inner {
+      display: flex;
+      justify-content: center; // логотип влево, сортировка вправо
+      align-items: center;
+    }
+  }
+}

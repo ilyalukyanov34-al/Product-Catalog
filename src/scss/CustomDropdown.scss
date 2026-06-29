@@ -1,0 +1,144 @@
+@use "./variables" as *;
+
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+  &__trigger {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 180px;
+    padding: 10px 14px;
+    background: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: $color-text-main;
+
+    span:first-child {
+      flex: 1;
+      text-align: left;
+    }
+
+    &:hover {
+      background: $color-bg-hover;
+    }
+  }
+
+  &__chevron {
+    color: $color-text-muted;
+    font-size: 12px;
+  }
+
+  &__list {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    background: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    list-style: none;
+    padding: 6px 0;
+    margin: 0;
+    z-index: 1000;
+
+    // Состояние "закрыто": невидимый, слегка смещён вверх, не кликабелен
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition:
+      opacity 0.18s ease,
+      transform 0.18s ease;
+
+    &--open {
+      // Состояние "открыто": видимый, на своём месте, кликабелен
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+  }
+
+  &__item {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 8px 14px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: $color-text-main; // Заменили $color-text
+
+    &:hover {
+      background: $color-bg-hover;
+    }
+
+    &--active {
+      color: $color-primary; // Заменили $color-accent
+      font-weight: 600;
+    }
+  }
+
+  @media screen and (max-width: 955px) {
+    &__trigger {
+      min-width: 140px;
+      padding: 8px 10px;
+      font-size: 13px;
+    }
+    &__chevron {
+      font-size: 11px; // было 12px
+    }
+
+    &__list {
+      padding: 5px 0; // было 6px 0
+    }
+
+    &__item {
+      padding: 6px 10px; // было 8px 14px — та же пропорция, что у &__trigger
+      font-size: 13px; // было 14px — совпадает с текстом в самой коробке
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    &__trigger {
+      min-width: 130px;
+      padding: 7px 9px;
+      font-size: 12px;
+    }
+    &__chevron {
+      font-size: 11px; // было 12px
+    }
+
+    &__list {
+      padding: 4px 0; // было 6px 0
+    }
+
+    &__item {
+      padding: 5px 9px; // было 8px 14px — та же пропорция, что у &__trigger
+      font-size: 12px; // было 14px — совпадает с текстом в самой коробке
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    &__trigger {
+      min-width: 120px;
+      padding: 6px 8px;
+      font-size: 12px;
+    }
+    &__chevron {
+      font-size: 11px; // было 12px
+    }
+
+    &__list {
+      padding: 3px 0; // было 6px 0
+    }
+
+    &__item {
+      padding: 4px 8px; // было 8px 14px — та же пропорция, что у &__trigger
+      font-size: 11px; // было 14px — совпадает с текстом в самой коробке
+    }
+  }
+}
