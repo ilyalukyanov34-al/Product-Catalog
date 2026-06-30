@@ -1,26 +1,21 @@
 import { create } from "zustand";
 import type { Product } from "../types/product";
 import { fetchProducts as fetchProductsApi } from "../api/products";
-// useProductStore.ts
 export type SortField = "title" | "price" | "stock";
 export type SortOrder = "asc" | "desc";
-
-// Вот тут — два новых "именованных типа", их пишем ДО интерфейса
-// type SortField = "title" | "price" | "stock";
-// type SortOrder = "asc" | "desc";
 
 interface ProductStore {
   products: Product[];
   total: number;
   page: number;
-  sortBy: SortField; // ← раньше тут был длинный список строк, теперь просто имя типа
-  order: SortOrder; // ← раньше "asc" | "desc", теперь имя типа
+  sortBy: SortField;
+  order: SortOrder;
   loading: boolean;
   error: string | null;
 
   fetchProducts: () => Promise<void>;
   setPage: (page: number) => void;
-  setSort: (sortBy: SortField, order: SortOrder) => void; // ← вместо string, string
+  setSort: (sortBy: SortField, order: SortOrder) => void; 
 }
 
 export const useProductStore = create<ProductStore>((set, get) => ({

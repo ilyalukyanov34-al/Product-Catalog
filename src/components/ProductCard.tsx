@@ -2,7 +2,7 @@ import type { Product } from "../types/product";
 import "../scss/ProductCard.scss";
 
 interface ProductCardProps {
-  product: Product; // какой тип у одного товара?
+  product: Product; 
 }
 
 function ProductCard({ product }: ProductCardProps) {

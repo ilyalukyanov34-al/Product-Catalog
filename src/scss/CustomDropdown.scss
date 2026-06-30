@@ -45,7 +45,6 @@
     margin: 0;
     z-index: 1000;
 
-    // Состояние "закрыто": невидимый, слегка смещён вверх, не кликабелен
     opacity: 0;
     transform: translateY(-8px);
     pointer-events: none;
@@ -54,7 +53,6 @@
       transform 0.18s ease;
 
     &--open {
-      // Состояние "открыто": видимый, на своём месте, кликабелен
       opacity: 1;
       transform: translateY(0);
       pointer-events: auto;
@@ -70,14 +68,14 @@
     border: none;
     cursor: pointer;
     font-size: 14px;
-    color: $color-text-main; // Заменили $color-text
+    color: $color-text-main; 
 
     &:hover {
       background: $color-bg-hover;
     }
 
     &--active {
-      color: $color-primary; // Заменили $color-accent
+      color: $color-primary; 
       font-weight: 600;
     }
   }
@@ -89,16 +87,16 @@
       font-size: 13px;
     }
     &__chevron {
-      font-size: 11px; // было 12px
+      font-size: 11px; 
     }
 
     &__list {
-      padding: 5px 0; // было 6px 0
+      padding: 5px 0; 
     }
 
     &__item {
-      padding: 6px 10px; // было 8px 14px — та же пропорция, что у &__trigger
-      font-size: 13px; // было 14px — совпадает с текстом в самой коробке
+      padding: 6px 10px; 
+      font-size: 13px;
     }
   }
 
@@ -109,16 +107,16 @@
       font-size: 12px;
     }
     &__chevron {
-      font-size: 11px; // было 12px
+      font-size: 11px; 
     }
 
     &__list {
-      padding: 4px 0; // было 6px 0
+      padding: 4px 0; 
     }
 
     &__item {
-      padding: 5px 9px; // было 8px 14px — та же пропорция, что у &__trigger
-      font-size: 12px; // было 14px — совпадает с текстом в самой коробке
+      padding: 5px 9px; 
+      font-size: 12px; 
     }
   }
 
@@ -129,16 +127,16 @@
       font-size: 12px;
     }
     &__chevron {
-      font-size: 11px; // было 12px
+      font-size: 11px; 
     }
 
     &__list {
-      padding: 3px 0; // было 6px 0
+      padding: 3px 0; 
     }
 
     &__item {
-      padding: 4px 8px; // было 8px 14px — та же пропорция, что у &__trigger
-      font-size: 11px; // было 14px — совпадает с текстом в самой коробке
+      padding: 4px 8px;
+      font-size: 11px;
     }
   }
 }

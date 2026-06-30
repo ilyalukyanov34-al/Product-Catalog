@@ -4,25 +4,22 @@
 .header {
   width: calc(
     100% - 40px
-  ); // ширина = "вся доступная ширина минус 40px" — даёт ровно 20px с каждой стороны
-  max-width: 1980px; // на 40px шире, чем .container (1440px) — по 20px "запаса" с каждой стороны
-  margin: 20px auto 30px; // auto по бокам — центрирует так же, как у .container
+  ); 
+  max-width: 1980px;
+  margin: 20px auto 30px; 
   background-color: $color-surface;
   border-radius: 16px;
   border-bottom: 1px solid $color-border;
   box-sizing: border-box;
   position: relative;
   padding: 20px;
-  // background: gray;
 
   &__inner {
     display: flex;
-    justify-content: space-between; // логотип влево, сортировка вправо
+    justify-content: space-between; 
     align-items: center;
     padding-top: 15px;
     padding-bottom: 15px;
-    // боковые отступы (padding: 0 20px) и max-width уже задаёт .container,
-    // здесь их повторно не пишем, чтобы не было двух разных источников правды
   }
 
   &__logo {
@@ -32,7 +29,6 @@
     color: $color-primary;
   }
 
-  // они автоматически применятся к самому .header, раз мы уже внутри его блока
   @media screen and (max-width: $breakpoint-mobile) {
     margin: 8px auto 0;
     border-radius: 12px;
@@ -54,7 +50,7 @@
   @media screen and (max-width: 325px) {
     &__inner {
       display: flex;
-      justify-content: center; // логотип влево, сортировка вправо
+      justify-content: center; 
       align-items: center;
     }
   }

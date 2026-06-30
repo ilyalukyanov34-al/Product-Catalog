@@ -43,7 +43,6 @@ function HomePage() {
 
       <ReactPaginate
         pageCount={Math.ceil(total / 12)}
-        // onPageChange={(event) => setPage(event.selected + 1)}
         onPageChange={(event: { selected: number }) =>
           setPage(event.selected + 1)
         }
