@@ -15,7 +15,7 @@ interface ProductStore {
 
   fetchProducts: () => Promise<void>;
   setPage: (page: number) => void;
-  setSort: (sortBy: SortField, order: SortOrder) => void; 
+  setSort: (sortBy: SortField, order: SortOrder) => void;
 }
 
 export const useProductStore = create<ProductStore>((set, get) => ({

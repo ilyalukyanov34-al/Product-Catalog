@@ -1,23 +1,22 @@
-
 // 1. СИСТЕМНЫЕ / БАЗОВЫЕ ЦВЕТА
-$color-bg: #f8f9fb; 
-$color-surface: #ffffff; 
-$color-text-main: #1f2333; 
-$color-text-muted: #666666; 
+$color-bg: #f8f9fb;
+$color-surface: #ffffff;
+$color-text-main: #1f2333;
+$color-text-muted: #666666;
 
 // 2. АКЦЕНТЫ И МАРКЕРЫ
 $color-primary: #6c5ce7;
-$color-sale: #e63946; 
-$color-old-price: #999999; 
-$color-in-stock: #2bb673; 
+$color-sale: #e63946;
+$color-old-price: #999999;
+$color-in-stock: #2bb673;
 
 // 3. ИНТЕРФЕЙСНЫЕ ЭЛЕМЕНТЫ (Границы, кнопки, ховеры)
-$color-border: #e0e0e0; 
-$color-border-hover: #b1b1b1; 
-$color-bg-hover: #f5f5f5; 
+$color-border: #e0e0e0;
+$color-border-hover: #b1b1b1;
+$color-bg-hover: #f5f5f5;
 
-$color-bullet-dot: #cccccc; 
-$color-divider-dark: #000000; 
+$color-bullet-dot: #cccccc;
+$color-divider-dark: #000000;
 
 // 4. ТИПОГРАФИКА
 $font-main: -apple-system, "Segoe UI", Arial, sans-serif;
@@ -25,4 +24,4 @@ $font-main: -apple-system, "Segoe UI", Arial, sans-serif;
 // 5. ТОЧКИ АДАПТИВА (breakpoints)
 $breakpoint-tablet: 1024px;
 $breakpoint-mobile: 640px;
-$breakpoint-small: 400px; 
+$breakpoint-small: 400px;
